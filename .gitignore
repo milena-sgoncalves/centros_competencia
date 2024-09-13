@@ -1,0 +1,23 @@
+# Ignorar arquivos Excel
+*.xlsx
+*.xls
+
+# Ignorar arquivo .env
+.env
+
+# Ignorar outras possíveis extensões de arquivos Excel
+*.xlsm
+*.xlsb
+
+
+*.zip
+
+*.db
+
+*.png
+
+*.brM3
+
+*.txt
+
+*.pbix

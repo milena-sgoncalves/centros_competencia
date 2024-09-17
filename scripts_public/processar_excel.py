@@ -60,7 +60,8 @@ def remover_valor_especifico(arquivo, coluna, valores_a_remover):
 
 
 def processar_excel(arquivo_origem, campos_interesse, novos_nomes_e_ordem, arquivo_destino, campos_data=None, campos_valor=None, campos_string=None,
-                    cpf=None, cnpj=None, coluna=None, rm_na=False, rm_valor_especifico=False, coluna_valor = None, valores_a_remover=None):
+                    cpf=None, cnpj=None, coluna=None, rm_na=False, rm_valor_especifico=False, coluna_valor = None, valores_a_remover=None, dropna=None,
+                    subset=None):
     # Ler o arquivo Excel
     df = pd.read_excel(arquivo_origem)
 
@@ -102,7 +103,9 @@ def processar_excel(arquivo_origem, campos_interesse, novos_nomes_e_ordem, arqui
         if coluna_valor in df_renomeado.columns:
             df_renomeado = remover_valor_especifico(df_renomeado, coluna_valor, valores_a_remover)
 
-
+    # Dropna
+    if dropna:
+        df_renomeado = df_renomeado.dropna(subset=[subset])
         
     
 

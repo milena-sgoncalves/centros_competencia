@@ -107,6 +107,7 @@ def juntar_pi():
 
     # Juntando os arquivos
     pi = pd.concat([afcct, acs], ignore_index=True)
+    pi = pi.dropna(how='all')
 
     # Salvando os arquivos
     pi.to_excel(os.path.abspath(os.path.join(CC_UP, 'pi.xlsx')), index = False)

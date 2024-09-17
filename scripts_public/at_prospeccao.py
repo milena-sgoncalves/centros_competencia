@@ -94,9 +94,10 @@ def at_empresas():
     }
 
     campos_string = ['cnpj']
+    valores_a_remover = ['']
 
     processar_excel(arquivo_origem, campos_interesse, novos_nomes_e_ordem, arquivo_destino, campos_string=campos_string,
-                    cnpj = 'cnpj', coluna = 'cnpj')
+                    cnpj = 'cnpj', coluna = 'cnpj', rm_valor_especifico=True, coluna_valor='cnpj', valores_a_remover=valores_a_remover)
 
 
 def processar_at_prospeccao():

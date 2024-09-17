@@ -60,7 +60,8 @@ def acs_projetos_empresas():
     valores_a_remover = ['N/A']
 
     processar_excel(arquivo_origem, campos_interesse, novos_nomes_e_ordem, arquivo_destino, campos_string=campos_string,
-                    cnpj = 'cnpj', rm_valor_especifico=True, coluna_valor='valor_alavancagem', valores_a_remover=valores_a_remover)
+                    cnpj = 'cnpj', rm_valor_especifico=True, coluna_valor='valor_alavancagem', valores_a_remover=valores_a_remover,
+                    dropna=True, subset='codigo_projeto')
 
 
 def acs_empresas():
@@ -95,9 +96,10 @@ def acs_empresas():
     }
 
     campos_string = ['cnpj']
+    valores_a_remover = ['']
 
     processar_excel(arquivo_origem, campos_interesse, novos_nomes_e_ordem, arquivo_destino, campos_string=campos_string,
-                    cnpj = 'cnpj', coluna = 'cnpj')
+                    cnpj = 'cnpj', coluna = 'cnpj', rm_valor_especifico=True, coluna_valor='cnpj', valores_a_remover=valores_a_remover)
 
 
 def processar_acs_empresas():

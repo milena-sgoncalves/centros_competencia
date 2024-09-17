@@ -138,6 +138,7 @@ def juntar_salvar_arq(lista_arquivos, nome_arquivo):
 
     # Juntando todos os DataFrames
     arquivos_juntos = pd.concat(dataframes, ignore_index=True)
+    arquivos_juntos = arquivos_juntos.dropna(how='all')
 
     # Salvando o DataFrame concatenado em um arquivo Excel
     caminho_destino = os.path.abspath(os.path.join(CC_UP, nome_arquivo))

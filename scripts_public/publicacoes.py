@@ -116,6 +116,7 @@ def juntar_publi():
 
     # Juntando os arquivos
     publicacoes = pd.concat([afcct, acs], ignore_index=True)
+    publicacoes = publicacoes.dropna(how='all')
 
     # Salvando os arquivos
     publicacoes.to_excel(os.path.abspath(os.path.join(CC_UP, 'publicacoes.xlsx')), index = False)

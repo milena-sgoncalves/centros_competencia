@@ -22,7 +22,7 @@ def afcct_pdi():
     projetos_afcct_pdi = pd.read_excel(os.path.abspath(os.path.join(CC_COPY, 'BI - DADOS TECNICO.xlsx')),
                                         sheet_name = 'AFCCT - Projetos PDI')
     projetos_afcct_pdi['tipo_projeto'] = 'pdi'
-    projetos_afcct_pdi['modelo'] = 'afcct'
+    projetos_afcct_pdi['acao'] = 'afcct'
 
     # Gerando a planilha
     projetos_afcct_pdi.to_excel(os.path.abspath(os.path.join(CC_DATA_RAW, 'projetos_afcct_pdi.xlsx')), index = False)
@@ -36,7 +36,7 @@ def afcct_pdi():
 
     # Campos de interesse e novos nomes das colunas
     campos_interesse = [
-            'modelo',
+            'acao',
             'tipo_projeto',
             'Centro de Competência',
             'Título do Projeto de PD&I de Ampliação e Fortalecimento de Competências Científicas e Tecnológicas',
@@ -64,7 +64,7 @@ def afcct_pdi():
             'Código do projeto': 'codigo_projeto',
             'Centro de Competência': 'centro_competencia',
             'tipo_projeto': 'tipo_projeto',
-            'modelo': 'modelo',
+            'acao': 'acao',
             'Título do Projeto de PD&I de Ampliação e Fortalecimento de Competências Científicas e Tecnológicas': 'titulo_projeto',
             'Descrição Pública': 'descriacao_publica',
             'Status atual do projeto': 'status_projeto',
@@ -97,7 +97,7 @@ def acs_pdi():
     projetos_acs_pdi = pd.read_excel(os.path.abspath(os.path.join(CC_COPY, 'BI - DADOS TECNICO.xlsx')),
                                         sheet_name = 'ACS - Projetos PDI')
     projetos_acs_pdi['tipo_projeto'] = 'pdi'
-    projetos_acs_pdi['modelo'] = 'acs'
+    projetos_acs_pdi['acao'] = 'acs'
 
     # Gerando a planilha
     projetos_acs_pdi.to_excel(os.path.abspath(os.path.join(CC_DATA_RAW, 'projetos_acs_pdi.xlsx')), index = False)
@@ -111,7 +111,7 @@ def acs_pdi():
 
     # Campos de interesse e novos nomes das colunas
     campos_interesse = [
-            'modelo',
+            'acao',
             'tipo_projeto',
             'Centro de Competência',
             'Título do Projeto PD&I de Atração e Criação de Startup',
@@ -137,7 +137,7 @@ def acs_pdi():
             'Código do projeto': 'codigo_projeto',
             'Centro de Competência': 'centro_competencia',
             'tipo_projeto': 'tipo_projeto',
-            'modelo': 'modelo',
+            'acao': 'acao',
             'Título do Projeto PD&I de Atração e Criação de Startup': 'titulo_projeto',
             'Objetivo': 'objetivo_projeto',
             'Descrição Pública': 'descricao_publica',
@@ -169,7 +169,7 @@ def afcct_formacao():
     projetos_afcct_formacao = pd.read_excel(os.path.abspath(os.path.join(CC_COPY, 'BI - DADOS TECNICO.xlsx')),
                                         sheet_name = 'AFCCT - Projetos Formação')
     projetos_afcct_formacao['tipo_projeto'] = 'formacao'
-    projetos_afcct_formacao['modelo'] = 'afcct'
+    projetos_afcct_formacao['acao'] = 'afcct'
 
     # Gerando a planilha
     projetos_afcct_formacao.to_excel(os.path.abspath(os.path.join(CC_DATA_RAW, 'projetos_afcct_formacao.xlsx')), index = False)
@@ -183,7 +183,7 @@ def afcct_formacao():
 
     # Campos de interesse e novos nomes das colunas
     campos_interesse = [
-            'modelo',
+            'acao',
             'tipo_projeto',
             'Centro de Competência',
             'Título do Projeto de Formação e Capacitação (exclusiva aos colaboradores do CC)',
@@ -209,7 +209,7 @@ def afcct_formacao():
             'Código do projeto': 'codigo_projeto',
             'Centro de Competência': 'centro_competencia',
             'tipo_projeto': 'tipo_projeto',
-            'modelo': 'modelo',
+            'acao': 'acao',
             'Título do Projeto de Formação e Capacitação (exclusiva aos colaboradores do CC)': 'titulo_projeto',
             'Objetivo': 'objetivo_projeto',
             'Descrição Pública': 'descricao_publica',
@@ -240,7 +240,7 @@ def acs_formacao():
     projetos_acs_formacao = pd.read_excel(os.path.abspath(os.path.join(CC_COPY, 'BI - DADOS TECNICO.xlsx')),
                                         sheet_name = 'ACS - Projetos de Formação')
     projetos_acs_formacao['tipo_projeto'] = 'formacao'
-    projetos_acs_formacao['modelo'] = 'acs'
+    projetos_acs_formacao['acao'] = 'acs'
 
     # Gerando a planilha
     projetos_acs_formacao.to_excel(os.path.abspath(os.path.join(CC_DATA_RAW, 'projetos_acs_formacao.xlsx')), index = False)
@@ -254,7 +254,7 @@ def acs_formacao():
 
     # Campos de interesse e novos nomes das colunas
     campos_interesse = [
-            'modelo',
+            'acao',
             'tipo_projeto',
             'Centro de Competência',
             'Título do Projeto de Formação e Capacitação (no contexto da ação ACS)',
@@ -280,7 +280,7 @@ def acs_formacao():
             'Código do projeto': 'codigo_projeto',
             'Centro de Competência': 'centro_competencia',
             'tipo_projeto': 'tipo_projeto',
-            'modelo': 'modelo',
+            'acao': 'acao',
             'Título do Projeto de Formação e Capacitação (no contexto da ação ACS)': 'titulo_projeto',
             'Objetivo': 'objetivo_projeto',
             'Descrição Pública': 'descricao_publica',
@@ -311,7 +311,7 @@ def fcrh():
     projetos_fcrh = pd.read_excel(os.path.abspath(os.path.join(CC_COPY, 'BI - DADOS TECNICO.xlsx')),
                                         sheet_name = 'FCRH - Projetos')
     projetos_fcrh['tipo_projeto'] = 'formacao'
-    projetos_fcrh['modelo'] = 'fcrh'
+    projetos_fcrh['acao'] = 'fcrh'
 
     # Gerando a planilha
     projetos_fcrh.to_excel(os.path.abspath(os.path.join(CC_DATA_RAW, 'projetos_fcrh.xlsx')), index = False)
@@ -325,7 +325,7 @@ def fcrh():
 
         # Campos de interesse e novos nomes das colunas
     campos_interesse = [
-            'modelo',
+            'acao',
             'tipo_projeto',
             'Centro de Competência',
             'Título do Projeto de Formação e Capacitação de RH para PD&I',
@@ -355,7 +355,7 @@ def fcrh():
             'Código do projeto': 'codigo_projeto',
             'Centro de Competência': 'centro_competencia',
             'tipo_projeto': 'tipo_projeto',
-            'modelo': 'modelo',
+            'acao': 'acao',
             'Título do Projeto de Formação e Capacitação de RH para PD&I': 'titulo_projeto',
             'Objetivo': 'objetivo_projeto',
             'Descrição Pública': 'descricao_publica',
@@ -400,7 +400,7 @@ def projetos():
             'codigo_projeto',
             'centro_competencia',
             'tipo_projeto',
-            'modelo',
+            'acao',
             'titulo_projeto',
             'objetivo_projeto',
             'descricao_publica',
@@ -431,7 +431,7 @@ def projetos_pdi():
 
     campos_interesse = [
             'codigo_projeto',
-            'modelo',
+            'acao',
             'resumo_projeto',
             'prof_empresas_envolvidos',
             'nome_prof_empresas_envolvidos',
@@ -462,7 +462,7 @@ def projetos_formacao():
 
     campos_interesse = [
             'codigo_projeto',
-            'modelo',
+            'acao',
             'num_prof_ingressantes',
             'num_prof_concluintes',
             'tipo_formacao',
